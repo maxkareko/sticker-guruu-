@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Stickers Guruuu | Custom Stickers</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Arial,sans-serif;background:#0b0b0f;color:#fff}
+nav{position:sticky;top:0;z-index:10;background:rgba(11,11,15,.95);border-bottom:1px solid #292934;padding:16px 6%;display:flex;justify-content:space-between;align-items:center}
+.logo{font-size:23px;font-weight:900;letter-spacing:.5px} .logo span{color:#a855f7}
+nav a{color:#ddd;text-decoration:none;margin-left:18px;font-size:14px}
+.hero{padding:75px 7% 55px;text-align:center;background:radial-gradient(circle at top,#40106b 0,#170c23 35%,#0b0b0f 70%)}
+.hero h1{font-size:clamp(40px,10vw,76px);line-height:1;margin-bottom:18px}
+.hero h1 span{color:#c084fc}
+.hero p{max-width:650px;margin:auto;color:#c8c8d0;line-height:1.6}
+.btn{display:inline-block;margin-top:25px;padding:13px 23px;border-radius:30px;background:#a855f7;color:#fff;text-decoration:none;font-weight:800}
+.section{padding:55px 6%} .section h2{font-size:32px;margin-bottom:10px}
+.sub{color:#999;margin-bottom:25px}
+.filters{display:flex;gap:10px;flex-wrap:wrap;margin:20px 0 30px}
+.filter{border:1px solid #383842;background:#17171e;color:#ddd;padding:9px 15px;border-radius:22px;cursor:pointer}
+.filter.active,.filter:hover{background:#a855f7;color:#fff;border-color:#a855f7}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:20px}
+.card{background:#15151c;border:1px solid #292934;border-radius:18px;overflow:hidden;transition:.2s}
+.card:hover{transform:translateY(-4px);border-color:#a855f7}
+.image-wrap{aspect-ratio:3/4;background:#222;overflow:hidden}
+.image-wrap img{width:100%;height:100%;object-fit:cover;display:block}
+.card-body{padding:15px}
+.tag{font-size:11px;text-transform:uppercase;color:#c084fc;font-weight:bold}
+.card h3{font-size:17px;margin:7px 0 14px}
+.bottom{display:flex;justify-content:space-between;align-items:center}
+.bottom strong{font-size:18px}
+.order{text-decoration:none;color:#fff;background:#a855f7;padding:8px 12px;border-radius:10px;font-size:13px;font-weight:bold}
+.prices{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:15px;margin-top:25px}
+.price{padding:25px;background:#15151c;border:1px solid #292934;border-radius:16px;text-align:center}
+.price .icon{font-size:30px} .price h3{margin:10px 0 5px} .price b{font-size:25px;color:#c084fc}
+.orderbox{background:#17121e;border:1px solid #5d2d7a;border-radius:20px;padding:30px;text-align:center}
+footer{padding:30px;text-align:center;color:#777;border-top:1px solid #292934}
+@media(max-width:600px){nav{padding:14px 4%}nav a{margin-left:8px}.section{padding:45px 4%}}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="logo">STICKERS <span>GURUUU</span> 🏷️</div>
+  <div>
+    <a href="#shop">Shop</a>
+    <a href="#prices">Prices</a>
+    <a href="#order">Order</a>
+  </div>
+</nav>
+
+<section class="hero">
+  <h1>Make It <span>Yours.</span></h1>
+  <p>Unique stickers for your wall, phone and laptop. Pick a design, choose your style and make your space yours.</p>
+  <a class="btn" href="#shop">Browse Stickers</a>
+</section>
+
+<section class="section" id="shop">
+  <h2>Featured Designs 🔥</h2>
+  <p class="sub">Fresh designs from Stickers Guruuu.</p>
+
+  <div class="filters">
+    <button class="filter active" onclick="filterProducts('all',this)">All</button>
+    <button class="filter" onclick="filterProducts('wall',this)">Wall · KES 70</button>
+    <button class="filter" onclick="filterProducts('phone',this)">Phone · KES 100</button>
+    <button class="filter" onclick="filterProducts('laptop',this)">Laptop · KES 300</button>
+  </div>
+
+  <div class="grid">
+    
+      <article class="card" data-category="wall">
+        <div class="image-wrap"><img src="images/purple-bunny.jpg" alt="Purple Bunny sticker design" loading="lazy"></div>
+        <div class="card-body">
+          <span class="tag">Wall</span>
+          <h3>Purple Bunny</h3>
+          <div class="bottom">
+            <strong>KES 70</strong>
+            <a class="order" href="#order">Order</a>
+          </div>
+        </div>
+      </article>
+    
+      <article class="card" data-category="laptop">
+        <div class="image-wrap"><img src="images/nike-lakers.jpg" alt="Nike &amp; Lakers sticker design" loading="lazy"></div>
+        <div class="card-body">
+          <span class="tag">Laptop</span>
+          <h3>Nike &amp; Lakers</h3>
+          <div class="bottom">
+            <strong>KES 300</strong>
+            <a class="order" href="#order">Order</a>
+          </div>
+        </div>
+      </article>
+    
+      <article class="card" data-category="phone">
+        <div class="image-wrap"><img src="images/red-custom.jpg" alt="Red Custom sticker design" loading="lazy"></div>
+        <div class="card-body">
+          <span class="tag">Phone</span>
+          <h3>Red Custom</h3>
+          <div class="bottom">
+            <strong>KES 100</strong>
+            <a class="order" href="#order">Order</a>
+          </div>
+        </div>
+      </article>
+    
+      <article class="card" data-category="phone">
+        <div class="image-wrap"><img src="images/pink-face.jpg" alt="Pink Face sticker design" loading="lazy"></div>
+        <div class="card-body">
+          <span class="tag">Phone</span>
+          <h3>Pink Face</h3>
+          <div class="bottom">
+            <strong>KES 100</strong>
+            <a class="order" href="#order">Order</a>
+          </div>
+        </div>
+      </article>
+    
+      <article class="card" data-category="wall">
+        <div class="image-wrap"><img src="images/pink-warrior.jpg" alt="Pink Warrior sticker design" loading="lazy"></div>
+        <div class="card-body">
+          <span class="tag">Wall</span>
+          <h3>Pink Warrior</h3>
+          <div class="bottom">
+            <strong>KES 70</strong>
+            <a class="order" href="#order">Order</a>
+          </div>
+        </div>
+      </article>
+    
+      <article class="card" data-category="wall">
+        <div class="image-wrap"><img src="images/couple-design.jpg" alt="Love Design sticker design" loading="lazy"></div>
+        <div class="card-body">
+          <span class="tag">Wall</span>
+          <h3>Love Design</h3>
+          <div class="bottom">
+            <strong>KES 70</strong>
+            <a class="order" href="#order">Order</a>
+          </div>
+        </div>
+      </article>
+    
+      <article class="card" data-category="wall">
+        <div class="image-wrap"><img src="images/purple-roses.jpg" alt="Purple Roses sticker design" loading="lazy"></div>
+        <div class="card-body">
+          <span class="tag">Wall</span>
+          <h3>Purple Roses</h3>
+          <div class="bottom">
+            <strong>KES 70</strong>
+            <a class="order" href="#order">Order</a>
+          </div>
+        </div>
+      </article>
+    
+      <article class="card" data-category="laptop">
+        <div class="image-wrap"><img src="images/purple-aesthetic.jpg" alt="Purple Aesthetic sticker design" loading="lazy"></div>
+        <div class="card-body">
+          <span class="tag">Laptop</span>
+          <h3>Purple Aesthetic</h3>
+          <div class="bottom">
+            <strong>KES 300</strong>
+            <a class="order" href="#order">Order</a>
+          </div>
+        </div>
+      </article>
+    
+      <article class="card" data-category="laptop">
+        <div class="image-wrap"><img src="images/dark-crow.jpg" alt="Dark Crow sticker design" loading="lazy"></div>
+        <div class="card-body">
+          <span class="tag">Laptop</span>
+          <h3>Dark Crow</h3>
+          <div class="bottom">
+            <strong>KES 300</strong>
+            <a class="order" href="#order">Order</a>
+          </div>
+        </div>
+      </article>
+    
+      <article class="card" data-category="phone">
+        <div class="image-wrap"><img src="images/card-design.jpg" alt="Custom Card Design sticker design" loading="lazy"></div>
+        <div class="card-body">
+          <span class="tag">Phone</span>
+          <h3>Custom Card Design</h3>
+          <div class="bottom">
+            <strong>KES 100</strong>
+            <a class="order" href="#order">Order</a>
+          </div>
+        </div>
+      </article>
+    
+  </div>
+</section>
+
+<section class="section" id="prices">
+  <h2>Simple Prices 💸</h2>
+  <div class="prices">
+    <div class="price"><div class="icon">🏠</div><h3>Wall Stickers</h3><b>KES 70</b></div>
+    <div class="price"><div class="icon">📱</div><h3>Phone Stickers</h3><b>KES 100</b></div>
+    <div class="price"><div class="icon">💻</div><h3>Laptop Stickers</h3><b>KES 300</b></div>
+  </div>
+</section>
+
+<section class="section" id="order">
+  <div class="orderbox">
+    <h2>Ready to Order? 🔥</h2>
+    <p class="sub">Message Stickers Guruuu with the design you want and where you want it.</p>
+    <a class="btn" href="https://wa.me/254700000000?text=Hi%20Stickers%20Guruuu!%20I%20want%20to%20order%20a%20sticker." target="_blank">Order on WhatsApp</a>
+    <p style="color:#777;font-size:12px;margin-top:15px">Replace the WhatsApp number in the code with your real business number.</p>
+  </div>
+</section>
+
+<footer>© 2026 Stickers Guruuu · Custom stickers made your way.</footer>
+
+<script>
+function filterProducts(category, button) {
+  document.querySelectorAll('.filter').forEach(b => b.classList.remove('active'));
+  button.classList.add('active');
+  document.querySelectorAll('.card').forEach(card => {
+    card.style.display = (category === 'all' || card.dataset.category === category) ? 'block' : 'none';
+  });
+}
+</script>
+</body>
+</html>
